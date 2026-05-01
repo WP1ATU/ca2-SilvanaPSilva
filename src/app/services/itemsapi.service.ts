@@ -19,7 +19,7 @@ export class ItemsapiService {
     });
   }
 
-  addItem(myMake: string, myModel: string, myYear: string, myImage: string) {
+  addCar(myMake: string, myModel: string, myYear: string, myImage: string) {
     const url = this._apiUrl;
     const car = {
       make: myMake,
@@ -33,7 +33,7 @@ export class ItemsapiService {
     });
   }
 
-  deleteItem(myId: string) {
+  deleteCar(myId: string) {
     const url = this._apiUrl + '/' + myId;
 
     this._http.delete(url).subscribe(() => {

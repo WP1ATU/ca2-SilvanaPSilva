@@ -9,6 +9,7 @@
     @for (car of api.cars(); track car._id) {
       <li>
         {{ car.make }} - {{ car.model }} - {{ car.year }}
+        <button (click)="api.deleteCar(car._id)" style="color:red;"> Delete </button>
       </li>
     }
   </ul>

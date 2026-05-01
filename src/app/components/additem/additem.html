@@ -1,17 +1,15 @@
-<h3>Add Car</h3>
+<h2>Add Car</h2>
 
-<form>
-  <input type="text" placeholder="Make">
-  <br><br>
+<input [(ngModel)]="make" placeholder="Make">
+<br>
 
-  <input type="text" placeholder="Model">
-  <br><br>
+<input [(ngModel)]="model" placeholder="Model">
+<br>
 
-  <input type="text" placeholder="Year">
-  <br><br>
+<input [(ngModel)]="year" placeholder="Year">
+<br>
 
-  <input type="text" placeholder="Image URL">
-  <br><br>
+<input [(ngModel)]="image" placeholder="Image URL">
+<br>
 
-  <button type="submit">Add Car</button>
-</form>
+<button (click)="addCar()">Add Car</button>

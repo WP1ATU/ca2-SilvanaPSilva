@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Additem } from '../additem/additem';
+import { Addcar } from '../additem/additem';
 import { Listitems } from '../listitems/listitems';
 
 
 @Component({
   selector: 'app-home',
-  imports: [Additem, Listitems],
+  imports: [Addcar, Listitems],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
