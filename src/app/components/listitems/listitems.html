@@ -1,16 +1,38 @@
-<h3>Car List</h3>
+<div class="card shadow-sm p-4 mt-4">
 
-<p>Total items: {{ api.cars().length }}</p>
+  <div class="d-flex justify-content-between align-items-center mb-3">    
+    <h3 class="text-center mb-4">List of Vehicles Available</h3>
+    <span class="badge text-bg-primary"> Total items: {{ api.cars().length }}</span>
+  </div>
 
-@if (api.cars().length === 0) {
-  <p>No items found.</p>
-} @else {
-  <ul>
-    @for (car of api.cars(); track car._id) {
-      <li>
-        {{ car.make }} - {{ car.model }} - {{ car.year }}
-        <button (click)="api.deleteCar(car._id)" style="color:red;"> Delete </button>
-      </li>
+  @if (api.cars().length === 0) {
+  <div class="alert alert-warning mb-0">
+    No vehicles found.
+  </div>
+  } @else {
+  <table class="table table-striped align-middle">
+    <thead class="table-light">
+      <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th class="text-end">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (car of api.cars(); track car._id) {
+      <tr>
+        <td>{{ car.make }}</td>
+        <td>{{ car.model }}</td>
+        <td>{{ car.year }}</td>
+        <td class="text-end">
+          <button class="btn btn-danger btn-sm" (click)="api.deleteCar(car._id)"> Delete</button>
+        </td>
+      </tr>
     }
-  </ul>
-}
+    </tbody>
+  </table>
+  }
+
+</div>
