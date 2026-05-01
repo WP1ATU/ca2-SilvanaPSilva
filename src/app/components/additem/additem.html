@@ -1,15 +1,48 @@
-<h2>Add Car</h2>
+<div class="card shadow-sm p-4 mb-4 mx-auto" style="max-width: 500px;">
+  <h3 class="text-center mb-4">Vehicle Registration Form</h3>
 
-<input [(ngModel)]="make" placeholder="Make">
-<br>
+  <div class="row mb-3 align-items-end">
+    <label class="col-sm-3 col-form-label"> Make</label>
+    <div class="col-sm-9">
+      <input [(ngModel)]="make" class="form-control" placeholder="Enter Car Make">
+    </div>
+  </div>
 
-<input [(ngModel)]="model" placeholder="Model">
-<br>
+  <div class="row mb-3 align-items-end">
+    <label class="col-sm-3 col-form-label">Model</label>
+    <div class="col-sm-9">
+      <input [(ngModel)]="model" class="form-control" placeholder="Enter Car Model">
+    </div>
+  </div>
 
-<input [(ngModel)]="year" placeholder="Year">
-<br>
+  <div class="row mb-3 align-items-end">
+    <label class="col-sm-3 col-form-label">Year</label>
+    <div class="col-sm-9">
+      <input [(ngModel)]="year" class="form-control" placeholder="Enter Car Year">
+    </div>
+  </div>
 
-<input [(ngModel)]="image" placeholder="Image URL">
-<br>
+  <div class="row mb-3 align-items-end">
+    <label class="col-sm-3 col-form-label">Image URL</label>
+    <div class="col-sm-9">
+      <input [(ngModel)]="image" class="form-control" placeholder="Enter Image URL">
+    </div>
+  </div>
 
-<button (click)="addCar()">Add Car</button>
+  <button (click)="addCar()" class="btn btn-primary">Add Car</button>
+</div>
+
+
+<!--  
+
+// 
+
+Bootstrap classes:
+> shadow-lg / shadow / shadow-sm = add large, medium and small shadow to the card
+> p-4 adds padding of 4 units to the card
+> mb-3 adds a margin-bottom of 3 units to the card
+> mx-auto centers the card horizontally
+> max-width: 500px limits the maximum width of the card to 500 pixels
+> text-center centers the text horizontally
+
+-->

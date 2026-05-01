@@ -1,12 +1,34 @@
+<div class="container mt-4">
 
+  <h1 class="text-center mb-4">Sil's Rent a Car</h1>
 
-<div class="container">
-  <nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/about">About</a>
-  </nav>
+    <nav class="d-flex justify-content-center gap-3 mb-4">
+      <a routerLink="/home" class="btn btn-outline-primary">Home</a>
+      <a routerLink="/about" class="btn btn-outline-secondary">About</a>
+    </nav>
+
+  <router-outlet></router-outlet>
+
 </div>
 
-<hr>
 
-<router-outlet></router-outlet>
+
+<!--  
+
+// This file is used to define the main HTML structure of the Angular application. 
+It includes a header with the title "Sil's Rent a Car" 
+and a navigation bar with links to the Home and About pages.
+
+The <router-outlet> directive is used to display the content of the routed components 
+based on the current URL.
+The styles are imported from Bootstrap for consistent styling across the application.
+
+Bootstrap classes:
+> mt-4 adds a margin-top of 4 units to the container
+> text-center centers the text horizontally
+> d-flex activates the flexbox layout
+> justify-content-center centers the content horizontally
+> gap-3 adds a gap of 3 units between the navigation links
+> mb-4 adds a margin-bottom of 4 units to the navigation bar 
+
+-->

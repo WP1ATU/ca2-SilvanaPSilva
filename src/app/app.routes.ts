@@ -5,7 +5,7 @@ import { About } from './components/about/about';
 
 
 export const routes: Routes = [
-    { path: '', component: Home },
+    { path: 'home', component: Home },
     { path: 'about', component: About }
 ];
 
