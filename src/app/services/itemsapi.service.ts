@@ -11,9 +11,9 @@ export class ItemsapiService {
 
   cars = signal<Cars[]>([]);
 
-  private _apiUrl = 'http://localhost:3000/api/cars'; 
+  private _apiUrl = 'http://localhost:5050/cars';
 
-  getCars(){
+  getCars() {
     this._http.get<Cars[]>(this._apiUrl).subscribe((data) => {
       this.cars.set(data);
     });
@@ -41,5 +41,5 @@ export class ItemsapiService {
     });
   }
 
-  
+
 }

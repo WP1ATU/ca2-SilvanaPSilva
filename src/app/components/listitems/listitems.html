@@ -1,17 +1,15 @@
 <h3>Car List</h3>
 
 <p>Total items: {{ api.cars().length }}</p>
+
 @if (api.cars().length === 0) {
-<p>No cars found.</p>
-} else {
-<p>Here are the cars in the list:</p>
-<ul>
-  @for ( car of api.cars(); track car.id ) {
-  <li>
-    {{ car.make }}
-    {{ car.model }}
-    {{ car.year }}
-  </li>
-  }
-</ul>
+  <p>No items found.</p>
+} @else {
+  <ul>
+    @for (car of api.cars(); track car._id) {
+      <li>
+        {{ car.make }} - {{ car.model }} - {{ car.year }}
+      </li>
+    }
+  </ul>
 }
