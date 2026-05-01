@@ -11,12 +11,14 @@ import { ItemsapiService } from '../../services/itemsapi.service';
 
 export class Listitems implements OnInit {
   // implement OnInit to call the getCars() method when the component is initialized and display the list of cars in the template
-    
+  
+  // F - 2.	Create a constructor from this invoke getItems() in the service file
+  constructor(public api: ItemsapiService) {}
+
   ngOnInit(): void {
     this.api.getCars();
   }
-
-  constructor(public api: ItemsapiService) {}
+  
   // inject the ItemsapiService into the component's constructor
 
 }
