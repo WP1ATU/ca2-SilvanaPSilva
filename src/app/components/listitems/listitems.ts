@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; // OnInit is an interface that allows us to perform actions when the component is initialized
 import {CommonModule} from '@angular/common';
 import { ItemsapiService } from '../../services/itemsapi.service';
 
@@ -18,5 +18,5 @@ export class Listitems implements OnInit {
 
   constructor(public api: ItemsapiService) {}
   // inject the ItemsapiService into the component's constructor
-  
+
 }
