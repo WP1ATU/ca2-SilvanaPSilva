@@ -1,1 +1,9 @@
-<p>listitems works!</p>
+<h3>Car List</h3>
+
+<ul>
+  <li *ngFor="let car of api.cars()">
+    {{ car.make }}
+    {{ car.model }}
+    {{ car.year }}
+  </li>
+</ul>

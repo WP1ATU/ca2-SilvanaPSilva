@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Additem } from '../additem/additem';
 import { Listitems } from '../listitems/listitems';
+
 
 @Component({
   selector: 'app-home',
@@ -8,4 +9,7 @@ import { Listitems } from '../listitems/listitems';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home implements OnInit {
+  ngOnInit(): void {
+  }
+}

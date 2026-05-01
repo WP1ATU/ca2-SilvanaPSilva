@@ -1,9 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {CommonModule} from '@angular/common';
+import { ItemsapiService } from '../../services/itemsapi.service';
 
 @Component({
   selector: 'app-listitems',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './listitems.html',
   styleUrl: './listitems.css',
 })
-export class Listitems {}
+
+export class Listitems implements OnInit {
+  // implement OnInit to call the getCars() method when the component is initialized and display the list of cars in the template
+    
+  ngOnInit(): void {
+    this.api.getCars();
+  }
+
+  constructor(public api: ItemsapiService) {}
+  // inject the ItemsapiService into the component's constructor
+  
+}
