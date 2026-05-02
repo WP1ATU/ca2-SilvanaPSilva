@@ -15,7 +15,7 @@ export class ItemsapiService {
   private _apiUrl = environment.apiUrl;
 
   getCars() {
-    this._http.get<Cars[]>(this._apiUrl).subscribe((data) => {
+    this._http.get<Cars[]>(`${this._apiUrl}/cars`).subscribe((data) => {
       this.cars.set(data);
     });
   }
