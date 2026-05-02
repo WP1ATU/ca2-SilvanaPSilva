@@ -2,6 +2,19 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
 
+
+a.	link to the front-end location (S3) 
+
+b.	Link to express location (ec2) (even though this will be stopped)
+
+	Record 1 minute screencast (max – no audio) of your application running
+o	This will clearly show the URL of the front end in the browser
+o	Interact with your application showing add/delete etc
+o	Show the ec2 instance <ipaddress>:5050/cars
+o	After your record your screencast, please stop EC2 instance
+	Upload screencast and readme.txt to Moodle. 
+
+
 ## Development server
 
 To start a local development server, run:
@@ -57,3 +70,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+![alt text](image-1.png)
