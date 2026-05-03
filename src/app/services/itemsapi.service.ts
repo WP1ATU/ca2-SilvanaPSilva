@@ -13,8 +13,9 @@ export class ItemsapiService {
   cars = signal<Cars[]>([]);
 
   private _apiUrl = environment.apiUrl;
-
+  
   getCars() {
+    console.log("API URL:", this._apiUrl);
     this._http.get<Cars[]>(`${this._apiUrl}/cars`).subscribe((data) => {
       this.cars.set(data);
     });
