@@ -15,14 +15,13 @@ export class ItemsapiService {
   private _apiUrl = environment.apiUrl;
   
   getCars() {
-    console.log("API URL:", this._apiUrl);
     this._http.get<Cars[]>(`${this._apiUrl}/cars`).subscribe((data) => {
       this.cars.set(data);
     });
   }
 
   addCar(myMake: string, myModel: string, myYear: string, myImage: string) {
-    const url = this._apiUrl;
+    const url = `${this._apiUrl}/cars`;
     const car = {
       make: myMake,
       model: myModel,
@@ -36,7 +35,7 @@ export class ItemsapiService {
   }
 
   deleteCar(myId: string) {
-    const url = this._apiUrl + '/' + myId;
+    const url = `${this._apiUrl}/cars/${myId}`;
 
     this._http.delete(url).subscribe(() => {
       this.getCars();
